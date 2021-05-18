@@ -1,4 +1,5 @@
-﻿using System;
+﻿using org.mariuszgromada.math.mxparser;
+using System;
 
 namespace ConsoleMathParser
 {
@@ -6,7 +7,11 @@ namespace ConsoleMathParser
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //Expression basic
+            Expression e = new Expression("2+(3-5)^2");
+            var result=e.calculate();
+            Console.WriteLine("Resultado: "+ result);
+
         }
     }
 }
